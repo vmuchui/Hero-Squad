@@ -35,4 +35,14 @@ public class SquadTest {
     wasupaa.addHero(mnati);
     assertTrue(wasupaa.getHeroes().contains(mnati));
   }
+  @Test
+  public void addHero_doesNotAddMoreHeroesThanTheSquadSize_boolean() {
+    Squad wasupaa = new Squad("wasupaa", 1, "fight buttsniffers");
+    Hero mnati = new Hero("name", 12, "tea", 21, "wasupaa");
+    Hero mrui = new Hero("name", 12, "tea", 21, "wasupaa");
+    wasupaa.addHero(mnati);
+    wasupaa.addHero(mrui);
+    assertTrue(wasupaa.getHeroes().contains(mnati));
+    assertEquals(false,wasupaa.getHeroes().contains(mrui));
+  }
 }
