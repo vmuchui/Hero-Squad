@@ -10,7 +10,7 @@ public class Hero {
   private int mStrength;
   private String mSquad;
   private int mId;
-  private static List<Hero> mHeroes;
+  private static List<Hero> mHeroesList = new ArrayList<Hero>();
   
   public Hero(String name, int age, String weakness, int strength, String squad) {
     mName = name;
@@ -18,14 +18,14 @@ public class Hero {
     mWeakness = weakness;
     mStrength = strength;
     mSquad = squad;
-    mHeroes.add(this);
-    mId = mHeroes.size();
+    mHeroesList.add(this);
+    mId = mHeroesList.size();
   }
-  public int getId() {
-    return mHeroes.size()-1;
+  public static Hero find(int id) {
+    return mHeroesList.get(id-1);
   }
   public static List<Hero> getHeroes() {
-    return mHeroes;
+    return mHeroesList;
   }
   public String getName() {
     return mName;
@@ -41,5 +41,8 @@ public class Hero {
   }
   public String getSquad() {
     return mSquad;
+  }
+  public int getId() {
+    return mId;
   }
 }
