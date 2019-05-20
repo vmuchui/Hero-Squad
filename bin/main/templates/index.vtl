@@ -5,7 +5,8 @@
 #if($squads)
   <h3>Here are the squads you have Created:</h3>
   #foreach($squad in $squads)
-    $squad.getName();
+    <p>$squad.getSquadName();</p>
+    <a href="$squad.getId()">View Squad</a>
   #end
 #else
   You have not created any Squads yet!
