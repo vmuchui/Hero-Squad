@@ -2,8 +2,10 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class HeroTest {
+
+  
   @Test
-  public void newHero_instatiatesCorrectly() {
+  public void newHero_instatiatesCorrectly_boolean() {
     Hero superMario = new Hero("Super Mario",102, "Garlic", 12, "NduthiGeng");
     assertEquals(true, superMario instanceof Hero);
   }
@@ -29,7 +31,7 @@ public class HeroTest {
   @Test
   public void Hero_returnsCorrectSpecialPowers_String() {
     Hero superMario = new Hero("Super Mario", 102, "Garlic", 12, "Watiaji");
-    assertEquals("Baking Pies", superMario.getPowers());
+    assertEquals(12, superMario.getStrength());
   }
 
   @Test
