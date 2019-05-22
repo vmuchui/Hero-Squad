@@ -20,7 +20,7 @@ This project was created using spark framework and java language.
 ##### on your browser
 * search for `localhost:4567`.
 #### Accessing remotely.
-* click on the link to the deployed site [here](https://github.com/vmuchui)
+* click on the link to the deployed site [here](https://muchuihero-squad.herokuapp.com/)
 ## BDD
 |input| output
 |----|----
