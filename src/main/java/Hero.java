@@ -7,17 +7,15 @@ public class Hero {
   private String mName;
   private int mAge;
   private String mWeakness;
-  private int mStrength;
-  private String mSquad;
+  private String mStrength;
   private int mId;
   private static List<Hero> mHeroesList = new ArrayList<Hero>();
   
-  public Hero(String name, int age, String weakness, int strength, String squad) {
+  public Hero(String name, int age, String weakness, String strength) {
     mName = name;
     mAge = age;
     mWeakness = weakness;
     mStrength = strength;
-    mSquad = squad;
     mHeroesList.add(this);
     mId = mHeroesList.size();
   }
@@ -36,12 +34,10 @@ public class Hero {
   public String getWeakness() {
     return mWeakness;
   }
-  public int getStrength() {
+  public String getStrength() {
     return mStrength;
   }
-  public String getSquad() {
-    return mSquad;
-  }
+  
   public int getId() {
     return mId;
   }
