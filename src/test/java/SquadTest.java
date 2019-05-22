@@ -31,15 +31,15 @@ public class SquadTest {
   public void addHero_addsHeroTomHeroesArrayList_true() {
     Squad.clear();
     Squad wasupaa = new Squad("wasupaa",12, "fight buttsniffers");
-    Hero mnati = new Hero("name", 12, "tea", 21, "wasupaa");
+    Hero mnati = new Hero("name", 12, "tea", "wasupaa");
     wasupaa.addHero(mnati);
     assertTrue(wasupaa.getHeroes().contains(mnati));
   }
   @Test
   public void addHero_doesNotAddMoreHeroesThanTheSquadSize_boolean() {
     Squad wasupaa = new Squad("wasupaa", 1, "fight buttsniffers");
-    Hero mnati = new Hero("name", 12, "tea", 21, "wasupaa");
-    Hero mrui = new Hero("name", 12, "tea", 21, "wasupaa");
+    Hero mnati = new Hero("name", 12, "tea", "wasupaa");
+    Hero mrui = new Hero("name", 12, "tea", "wasupaa");
     wasupaa.addHero(mnati);
     wasupaa.addHero(mrui);
     assertTrue(wasupaa.getHeroes().contains(mnati));
