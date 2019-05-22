@@ -1,0 +1,23 @@
+<div class="container">
+<div class="list-group">
+
+#if($squads)
+  <h3>Here are the squads you have Created:</h3>
+  <ul class="card-group">
+    #foreach($squad in $squads)
+      <li class="card">
+        <p>Squad Name: $squad.getSquadName()</p>
+        <p>Maximum size of your squad: $squad.getSize()</p>
+        <p>Cause: $squad.getCause()</p>
+        <a href="/heroes/new" class="btn btn-lg btn-danger"> Add Heroes </a>
+      </li>
+      
+    #end
+  </ul>
+  
+#else
+  You have not created any Squads yet!
+#end
+</div>
+<a href="/squads/new"class= "btn btn-success"> Add Squad </a>
+</div>

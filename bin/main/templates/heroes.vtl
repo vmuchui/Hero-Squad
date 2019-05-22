@@ -1,14 +1,13 @@
-<h1>These heroes belong to $createdSquad.getSquadName() squad.</h1>
+<h1>These heroes belong to $newSquad.getSquadName() squad.</h1>
 #if($heroes)
   #foreach($hero in $heroes)
     <p>Hero's name: $hero.getName()</p>
     <p>Hero's age: $hero.getAge()</p>
     <p>Hero's strength: $hero.getStrength()</p>
-    <p>Hero's </p>
+    <p>Hero's weakness: $hero.getWeakness()</p>
   #end
   
 #else
-  <h3>Create Heroes to add to this squad:</h3>
-  <form action="/" method= post>
-  </form>
+  There are no heroes in this squad!
 #end
+<a href="/heroes/new" class="btn btn-primary"> Add Hero </a>
