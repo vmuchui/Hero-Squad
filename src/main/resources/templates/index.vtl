@@ -1,26 +1,8 @@
-<div class = "jumbotron">
-<h1 class= "text-center"> Welcome to Heroes!</h1>
-</div>
+
 <div class="container">
-#if($squads)
-  <h3>Here are the squads you have Created:</h3>
-  #foreach($squad in $squads)
-    <p>$squad.getSquadName();</p>
-    <a href="$squad.getId()">View Squad</a>
-  #end
-#else
-  You have not created any Squads yet!
-#end
+
+  <div class="card">
+  <a href="/squads" class="btn btn-primary"> View Squads </a>
+  <a href="/squads/new"class= "btn btn-success"> Create Squad </a>
+  </div>
 </div>
-
-<form class="form-group" action="/new" method="post">
-  <h4>Create new Squad:</h4>
-  <label for="name">Squad Name:</label>
-  <input class="form-control" id="name" name="name" type="text">
-  <label for="age">Squad size:</label>
-  <input class="form-control" id="size" name="size" type="number">
-  <label for="cause">Squad Cause:</label>
-  <input class="form-control" id="cause" name="cause" type="text">
-
-  <button type="submit" class="btn btn-success">Create Squad!</button>
-</form>
