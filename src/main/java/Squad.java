@@ -7,8 +7,9 @@ public class Squad {
   private int mSize;
   private String mCause;
   private static List<Squad> mSquads = new ArrayList<>();
-  private List<Hero> mHeroes;
+  private ArrayList<Hero> mHeroes;
   private int mId;
+  
 
   public Squad(String name, int size, String cause) {
     mSquadname = name;
