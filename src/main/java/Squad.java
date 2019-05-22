@@ -45,13 +45,13 @@ public class Squad {
     }
     
   }
-  // public static Squad find(int id) {
-  //   try {
-  //     return mSquads.get(id - 1);
-  //   } catch (IndexOutOfBoundsException exception) {
-  //     return null;
-  //   }
-  // }
+  public static Squad find(int id) {
+    try {
+      return mSquads.get(id - 1);
+    } catch (IndexOutOfBoundsException exception) {
+      return null;
+    }
+  }
   public static void clear() {
     mSquads.clear();
   }
