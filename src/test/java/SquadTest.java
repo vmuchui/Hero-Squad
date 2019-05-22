@@ -45,4 +45,10 @@ public class SquadTest {
     assertTrue(wasupaa.getHeroes().contains(mnati));
     assertEquals(false,wasupaa.getHeroes().contains(mrui));
   }
+  @Test
+  public void find_returnsSquad_Squad() {
+    Squad wasupaa = new Squad("wasupaa", 1, "fight buttsniffers");
+    assertEquals(wasupaa, Squad.find(1));
+
+  }
 }
