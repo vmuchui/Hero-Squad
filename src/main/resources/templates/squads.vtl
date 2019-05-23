@@ -9,14 +9,15 @@
         <p>Squad Name: $squad.getSquadName()</p>
         <p>Maximum size of your squad: $squad.getSize()</p>
         <p>Cause: $squad.getCause()</p>
-        <a href="/heroes/new" class="btn btn-lg btn-danger"> Add Heroes </a>
+        <a href="/heroes/new" class="btn btn-danger"> Add Heroes to squad </a>
+        <a href="/heroes" class="btn btn-warning"> View heroes in squad.</a>
       </li>
       
     #end
   </ul>
   
 #else
-  You have not created any Squads yet!
+  <h3>You have not created any Squads yet!</h3>
 #end
 </div>
 <a href="/squads/new"class= "btn btn-success"> Add Squad </a>
