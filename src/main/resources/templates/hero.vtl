@@ -1,0 +1,20 @@
+
+#if($heroes)
+  <h1> Heroes List!</h1>
+  <ol>
+  #foreach($hero in $heroes)
+      <li>
+        <p>Hero's name: $hero.getName()</p>
+        <p>Hero's age: $hero.getAge()</p>
+        <p>Hero's strength: $hero.getStrength()</p>
+        <p>Hero's weakness: $hero.getWeakness()</p>
+      </li>
+    #end
+  </ol>
+ 
+  
+#else
+  There are no heroes in this squad!
+#end
+<a href="/heroes/new" class="btn btn-primary"> Add Hero </a>
+<a href="/squads" class="btn btn-warning"> View squads </a>
