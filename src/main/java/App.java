@@ -64,14 +64,14 @@ public class App {
       model.put("template", "templates/success.vtl");
       return new ModelAndView(model,layout);
     }, new VelocityTemplateEngine());
-    get("/heroes/new", (request, response)-> {
+    get("/heroes/new", (request,response)-> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("template", "templates/hero-form.vtl");
+      model.put("template", "templates/newhero.vtl");
       return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
+    },new VelocityTemplateEngine());
     get("/newhero", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("template", "templates/success-hero.vtl");      
+      model.put("template", "templates/herosuccess.vtl");      
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
     post("/newhero", (request, response)-> {
@@ -90,13 +90,13 @@ public class App {
 
       heroes.add(newHero);
       
-      model.put("template", "templates/success-hero.vtl");
+      model.put("template", "templates/herosuccess.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
     get("/heroes", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("heroes", request.session().attribute("heroes"));
-      model.put("template", "templates/heroes.vtl");
+      model.put("template", "templates/hero.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
   }
